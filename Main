@@ -5007,7 +5007,7 @@ end
 
 -- Scripts:
 
-local function ZFAGOB_fake_script() -- Execute.Script 
+local function UTLEB_fake_script() -- Execute.Script 
 	local script = Instance.new('Script', Execute)
 	local req = require
 	local require = function(obj)
@@ -5024,8 +5024,8 @@ local function ZFAGOB_fake_script() -- Execute.Script
 		require(script.Loadstring)(lol)()
 	end)
 end
-coroutine.wrap(ZFAGOB_fake_script)()
-local function XMIV_fake_script() -- Execute.LocalScript 
+coroutine.wrap(UTLEB_fake_script)()
+local function LVFX_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 	local req = require
 	local require = function(obj)
@@ -5044,8 +5044,8 @@ local function XMIV_fake_script() -- Execute.LocalScript
 		remote:FireServer(text.Text)
 	end)
 end
-coroutine.wrap(XMIV_fake_script)()
-local function DWZVR_fake_script() -- Clear.LocalScript 
+coroutine.wrap(LVFX_fake_script)()
+local function SPDN_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 	local req = require
 	local require = function(obj)
@@ -5056,16 +5056,14 @@ local function DWZVR_fake_script() -- Clear.LocalScript
 		return req(obj)
 	end
 
-	local button = script.Parent
-	local text = script.Parent.Parent.CodeBar
-	local remote = script.Parent.ExecuteScript
 	
-	button.MouseButton1Click:Connect(function()
-		text.Text = " "
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CodeBar.Text = " "
 	end)
 end
-coroutine.wrap(DWZVR_fake_script)()
-local function ISMV_fake_script() -- Frame.Dragify 
+coroutine.wrap(SPDN_fake_script)()
+local function GPGKP_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 	local req = require
 	local require = function(obj)
@@ -5114,4 +5112,4 @@ local function ISMV_fake_script() -- Frame.Dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(ISMV_fake_script)()
+coroutine.wrap(GPGKP_fake_script)()
